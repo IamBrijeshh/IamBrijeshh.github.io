@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap.js-->
+    <!-- We have downloaded this files and we can use it as offline in our machine-->
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"> </script>
+    <script src="Bootstrap/js/popper.min.js"> </script>
+    <script src="Bootstrap/js/js_bootstrap.min.js"> </script>
+
+    
+    <!-- Bootstrap CSS file-->
+    <link href="Bootstrap/css/css_bootstrap.min.css" rel="stylesheet">
+    <!-- downloaded font awsome file for offline use-->
+    <link href="fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Mobile App Project</title>
+  </head>
+
+  <!--
+      xs<576 | 576<sm<768 | 768<md<992 | 992<lg|1200 | 1200<xl
+  -->
+
+  <body>
+
+    <!-- Start of Header -->
+
+    <header> 
+      <div class="p-1" id="topheader">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-end">
+                <a class="p-1" href="tel:+919586011927"><i class="fa-solid fa-phone-flip headericonstyle"></i> +(91) 9586011927</a>
+                <a class="p-1" href="mailto:bjotaniya4@gmail.com"><i class="fa-solid fa-envelope headericonstyle"></i> bjotaniya4@gmail.com</a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div id="bottomheader">
+        <div class="container-fluid mb-4">
+          <nav class="navbar navbar-dark navbar-expand-md p-3 pe-4 pe-sm-5">
+            <a class="navbar-brand" href="#">
+              <h3 style="font-size: 1.8rem;">Brijesh Jotaniya</h3>
+            </a>
+            <button data-bs-toggle="collapse" data-bs-target="#navbarToggler" type="button" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav ms-1 navli">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" role="button" href="#">Projects</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="webdevelopment.html">Web Development Projects</a>
+                    <a class="dropdown-item active" href="mobileapp.html">Mobile App Project</a>
+                    <a class="dropdown-item" href="softwaredevelopment.html">Software Development Project</a>
+                    <a class="dropdown-item" href="datascience.html">Data Science Projects</a>
+                    <a class="dropdown-item" href="systemdesign.html">System Design Project</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sayhi.php">Say Hii!</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- End of Header -->
+
+    <!-- Start : mobileapp page topsection class -->
+
+    <section class="topsection">
+      <div class="container">
+        <div class="row topsectionbackground">
+          <div class="col-md-12 p-3 p-md-3">
+            <h3 class="text-center topsectiontext" >Marriage Bureau Application</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End : mobileapp page topsection class -->
+
+    <!-- Start : mobileapp page discription class -->
+
+    <section class="discription">
+      <div class="container">
+        <div class="row dicriptionbackground">
+          <div class="col-md-6 p-md-5">
+            <h4 class="my-4">Description --</h4>
+            <p class="para"> Using 
+              <span class="highlight">Kotlin</span> programming language and 
+              <span class="highlight">SQLite Database </span> developed a Marriage Beuro Mobile Application.
+              User can first regisster themself then with their credentials user can login into the application.
+              After the successfully login into the application user can view multiple profiles.
+              Also user can view the details of individual profile and if their requirement matches then user can connect with that profile-user.  
+            </p>
+            <p class="para">  
+              In future using real time database this application can be work as real time dynamic Mobile Application. 
+              Used implicit intent to go one activity to another activity.
+            </p>          
+          </div>
+          
+          <div class="col-md-6 p-md-5">
+            <h4 class="my-4">Technologies used -- </h4>
+              <h6 class="mt-4">
+                <span class=" tech p-2 text-center "> Kotlin</span>
+                <span class=" tech p-2"> SQLite</span>
+              </h6>
+              <h6 class="mt-4"><span class=" tech p-2"> Android Studio</span></h6>                 
+            <h5 class=" mt-5 web">Activity -: </h5>
+            <ul class="litems">
+              <li style="list-style: square;">Sign Up</li>
+              <li style="list-style: square;">Login</li>
+              <li style="list-style: square;">Multiple-Profile</li>
+              <li style="list-style: square;">Personal-Profile</li>
+            </ul>                                  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End : mobileapp page discription class -->
+
+    <!-- Start : mobileapp page imgslider class -->
+
+    <section class="imgslider mb-3">
+      <div class="container imgclass">
+        <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="true">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/mobileappimage/login.jpg" class="img-fluid d-block w-100 mobilesliderimg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/mobileappimage/signup.jpg" class="img-fluid d-block w-100 mobilesliderimg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/mobileappimage/multi-profile.jpg" class="img-fluid d-block w-100 mobilesliderimg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/mobileappimage/personal-profile.jpg" class="img-fluid d-block w-100 mobilesliderimg" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/mobileappimage/personal-profile1.jpg" class="img-fluid d-block w-100 mobilesliderimg" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon mobileicon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
+            <span class="carousel-control-next-icon mobileicon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- End : mobileapp page imgslider class -->
+
+
+    <!-- Start of Footer -->
+
+    <footer class="full-footer">
+      <div class="container top-footer p-md-3 p-1">
+        <div class="row footertxt">
+          <div class="col-md-5 ps-4 pe-4">
+            <h4>Brijesh Jotaniya</h4>
+            <p>
+              Completed Bachlore of Science in Information Technology at Charusat University. Having knowledge
+              of many programming language.. <a href="">Read more</a>
+            </p>
+            <a href="https://www.linkedin.com/in/brijesh-jotaniya-01890227a/" ><i class="fa-brands fa-2x fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/brijesh_jotaniya/" class="mx-2"><i class="fa-brands fa-2x fa-instagram"></i></a>
+            <a href="https://github.com/Brijeshvj" ><i class="fa-brands fa-2x fa-github"></i></a>
+          </div>
+          <div class="col-md-3 ps-4 pe-4 mt-1 footer-col2">
+            <h4>Important Skills</h4>
+            <h6>Web Development</h6>
+            <h6>Mobile App Development</h6>
+            <h6>Software Development</h6>
+            <h6>Data Science</h6>
+            <h6>System Design</h6>
+          </div>
+          <div class="col-md-4 mt-1 ps-4 pe-4">
+            <h4>Contact Me</h4>
+            <a href="tel:+919586011927" class="footercontactlinkstyle"><i class="fa-solid fa-phone-flip"></i> +(91) 9586011927</a><br>
+            <a href="mailto:bjotaniya4@gmail.com" class="footercontactlinkstyle"><i class="fa-solid fa-envelope"></i> bjotaniya4@gmail.com</a>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.82106515896!2d70.73889438913474!3d22.273466166614785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1687956208082!5m2!1sen!2sin" frameborder="0"></iframe>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div class="coontainer-fluid bottom-footer pt-2">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>Copyright &#169 2023 - Brijesh Jotaniya</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End of Footer -->
+
+
+
+  </body>
+</html>

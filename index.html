@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap.js-->
+    <!-- We have downloaded this files and we can use it as offline in our machine-->
+    <script src="Bootstrap/js/jquery-3.3.1.slim.min.js"> </script>
+    <script src="Bootstrap/js/popper.min.js"> </script>
+    <script src="Bootstrap/js/js_bootstrap.min.js"> </script>
+
+    
+    <!-- Bootstrap CSS file-->
+    <link href="Bootstrap/css/css_bootstrap.min.css" rel="stylesheet">
+    <!-- downloaded font awsome file for offline use-->
+    <link href="fontawesome-free-6.4.0-web/css/all.css" rel="stylesheet">
+    <!--Javascript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <!--CSS file-->
+    <link href="css/style.css" rel="stylesheet">
+    <title>Home - Brijesh Jotaniya</title>
+  </head>
+
+  <!--
+      xs<576 | 576<sm<768 | 768<md<992 | 992<lg|1200 | 1200<xl
+  -->
+
+  <body>
+    <!-- Start of Header-->
+
+    <header> 
+      <div class="p-1" id="topheader">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-end">
+                <a class="p-1" href="tel:+919586011927"><i class="fa-solid fa-phone-flip headericonstyle"></i> +(91) 9586011927</a>
+                <a class="p-1" href="mailto:bjotaniya4@gmail.com"><i class="fa-solid fa-envelope headericonstyle"></i> bjotaniya4@gmail.com</a>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <div id="bottomheader">
+        <div class="container-fluid">
+          <nav class="navbar navbar-dark navbar-expand-md p-3 pe-4 pe-sm-5">
+            <a class="navbar-brand" href="#">
+              <h3 style="font-size: 1.8rem;">Brijesh Jotaniya</h3>
+            </a>
+            <button data-bs-toggle="collapse" data-bs-target="#navbarToggler" type="button" class="navbar-toggler">
+            <span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav ms-1 navli">
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" href="#">Projects</a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="webdevelopment.html">Web Development Projects</a>
+                    <a class="dropdown-item" href="mobileapp.html">Mobile App Project</a>
+                    <a class="dropdown-item" href="softwaredevelopment.html">Software Development Project</a>
+                    <a class="dropdown-item" href="datascience.html">Data Science Projects</a>
+                    <a class="dropdown-item" href="systemdesign.html">System Design Project</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sayhi.php">Say Hii!</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+        </div>
+      </div>
+    </header>
+    
+    <!-- End of Header-->
+
+    <!-- Start of topclass section-->
+
+    <section class="topclass pt-4 pb-5">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-5 ps-2">
+              <h3>Hello I'm Brijesh!!!</h3>
+              <h2 class="highlight1">Student, Developer & Runner</h2>
+              <script>
+                // Wrap every letter in a span
+                    var textWrapper = document.querySelector('.highlight1');
+                    textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+                    anime.timeline({loop: true})
+                      .add({
+                        targets: '.highlight1 .letter',
+                        opacity: [0,1],
+                        easing: "easeInOutQuad",
+                        duration: 2250,
+                        delay: (el, i) => 150 * (i+1)
+                      }).add({
+                        targets: '.highlight1',
+                        opacity: 0,
+                        duration: 1000,
+                        easing: "easeOutExpo",
+                        delay: 1000
+                      });
+              </script>
+
+              <h6 class="toppara">By constantly learning, I strive to achieve high career growth and keep myself dynamic, 
+                visionary, and competitive in the world's changing environment.
+              </h6>
+            </div>
+            <div class="col-md-7 ps-2">
+              <img class="img-fluid p-2" src="images/hero.jpg"  alt="herosectionimage">
+            </div>
+          </div>   
+        </div>
+    </section>
+
+    <!-- End of topclass section-->
+
+    <!-- Start of middleclass section-->
+
+    <section class="middleclass">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              <h3 class="text-center p-2"><span class="bor"> Let's Get Start !!!!</span></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of middleclass section-->
+
+    <!--Start of aboutclass section-->
+
+      <section class="aboutclass">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <img src="images/final.png" alt="brijesh_jotaniya" class="img-fluid img p-5 rounded mx-auto d-block">
+            </div>
+            <div class="col-md-6 mt-5 ps-3">
+              <h2 class="mb-4 content1 ">About Me !</h2>
+              <h5 class="mb-4 content2 ">I'm Brijesh Jotaniya a graduate student of Bachelor of Science in Information Technology at Charotar University of Science and Technology, seeking for an opportunity to work with Data science, Machine Learning, Mobile Application Development and Web Development. Dedicated and motivated to acquire new skills. Able to perform well under pressure in a team and individually.</h5>
+              <h5 class="content2">I have experience in a wide variety of technologies like web development, software development, data science, machine learning, database management, and Android app development during my academic journey.</h5>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!--End of aboutclass section-->
+
+    <!--Start of project section-->
+    
+      <section class="homeproject">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center p-5 p-md-4 letclass">
+              <h3>Let's see some skills which is i'm having !!!</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <a href="webdevelopment.html">
+                <img class="img-fluid proimage p-4" src="images/skills/web-development.png" alt="">
+              </a>
+              <h5 class="skillname">Web Development</h5>
+              <p class="skillpara">During academic journey acquired knowledge of Web technologies like HTML, CSS, JavaScript, Bootstrap.</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <a href="mobileapp.html">
+                <img class="img-fluid proimage p-4" src="images/skills/mobile-app.png" alt="">
+              </a>         
+              <h5 class="skillname">Mobile App Development</h5>
+              <p class="skillpara">Developed many Mobile Application using Kotlin and SQlite. Also having knowledge of flutter!</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <a href="softwaredevelopment.html">
+                <img class="img-fluid proimage p-4" src="images/skills/software-dev.png" alt="">
+              </a>         
+              <h5 class="skillname">Software Development</h5>
+              <p class="skillpara">Using C# and ASP.Net developed windows based application which can be used by faculty of organization.</p>
+            </div>
+          </div>
+          <div class="row p-2">
+            <div class="col-md-6 text-center mb-4">
+              <a href="datascience.html">
+              <img class="img-fluid proimage p-2" src="images/skills/data_science.png" alt="">
+              </a>
+              <h5 class="skillname">Data Science</h5>
+              <p class="skillpara">Very interested topic! Having deep and wide verity of knowledge in this technology like Machine learning, Data augmentation etc.</p>
+            </div>
+            <div class="col-md-6 text-center mb-4">
+              <a href="systemdesign.html">
+              <img class="img-fluid proimage p-4" src="images/skills/sad.png" alt="">
+              </a>
+              <h5 class="skillname">System Design & Analysis</h5>
+              <p class="skillpara">Created System design of a Hospital management system using Context, DFD, UML, Class diagram and Feasibility studies. </p>
+            </div>  
+          </div>
+        </div>
+
+      </section>
+    
+    <!--End of project section-->
+
+    <!-- Start of Footer-->
+
+    <footer class="full-footer">
+      <div class="container top-footer p-md-3 p-1">
+        <div class="row footertxt">
+          <div class="col-md-5 ps-4 pe-4">
+            <h4>Brijesh Jotaniya</h4>
+            <p>
+              Completed Bachlore of Science in Information Technology at Charusat University. Having knowledge
+              of many programming language.. <a href="">Read more</a>
+            </p>
+            <a href="https://www.linkedin.com/in/brijesh-jotaniya-01890227a/" ><i class="fa-brands fa-2x fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/brijesh_jotaniya/" class="mx-2"><i class="fa-brands fa-2x fa-instagram"></i></a>
+            <a href="https://github.com/Brijeshvj" ><i class="fa-brands fa-2x fa-github"></i></a>
+          </div>
+          <div class="col-md-3 ps-4 pe-4 mt-1 footer-col2">
+            <h4>Important Skills</h4>
+            <h6>Web Development</h6>
+            <h6>Mobile App Development</h6>
+            <h6>Software Development</h6>
+            <h6>Data Science</h6>
+            <h6>System Design</h6>
+          </div>
+          <div class="col-md-4 mt-1 ps-4 pe-4">
+            <h4>Contact <Menu:context></Menu:context></h4>
+            <a href="tel:+919586011927" class="footercontactlinkstyle"><i class="fa-solid fa-phone-flip"></i> +(91) 9586011927</a><br>
+            <a href="mailto:bjotaniya4@gmail.com" class="footercontactlinkstyle"><i class="fa-solid fa-envelope"></i> bjotaniya4@gmail.com</a>
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147.82106515896!2d70.73889438913474!3d22.273466166614785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1687956208082!5m2!1sen!2sin" frameborder="0"></iframe>
+            </div> 
+          </div>
+        </div>
+      </div>
+      <div class="coontainer-fluid bottom-footer pt-2">
+        <div class="row">
+          <div class="col-12 text-center">
+            <p>Copyright &#169 2023 - Brijesh Jotaniya</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End of Footer-->
+  </body>
+</html>

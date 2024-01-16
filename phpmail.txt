@@ -1,0 +1,42 @@
+use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+
+    require 'phpmailer/src/Exception.php';
+    require 'phpmailer/src/PHPMailer.php';
+    require 'phpmailer/src/SMTP.php';
+    
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+    
+    $mail = new PHPMailer;
+    $mail->isSMTP();
+    $mail->SMTPDebug = 0;
+    $mail->Host = 'smtp.hostinger.com';
+    //$mail->Port = 587;
+    $mail->Port = 465;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'ssl';
+$mail->Username = 'memorial@lyfeindex.com';
+    $mail->Password = '';
+    $mail->setFrom('memorial@lyfeindex.com', 'Memorial LyfeIndex');
+    $mail->addReplyTo('memorial@lyfeindex.com', 'Memorial LyfeIndex');
+$mail->addAddress($email, $firstname." ".$lastname);
+        //echo 'sending to input';
+        $mail->Subject = 'Add Memorial Details for Your Loved Ones';
+        
+        $html = file_get_contents('https://lyfeindex.com/Form/mail/');
+        
+        $html = str_replace("{{name}}", $firstname, $html);
+        // Set the HTML content for the email
+        $mail->msgHTML($html);
+        
+        
+        //$mail->msgHTML('<h1>LyfeIndex</h1><p>Here is your link to the memorial form : <a href="ht
+//$mail->msgHTML('<h1>LyfeIndex</h1><p>Here is your link to the memorial form : <a href="https://lyfeindex.com/Form/add_memorial/">Memorial Form</a></p>');
+        //$mail->Body = 'Please click on the link and navigate to the Memorial Form to fill up the details : https://lyfeindex.com/Form/add_memorial/';
+        
+        if (!$mail->send()) {
+            echo 'Mailer Error: ' . $mail->ErrorInfo;
+        } else {
+            echo 'The email message was sent.';
+        }
