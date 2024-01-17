@@ -119,10 +119,8 @@
             }
             if (isValid) {
                 // If all required fields have values, clear any previous error message
-                document.getElementById("error-message").innerHTML = "";
-
-                alert("Form submitted successfully!");
-                
+                document.getElementById("error-message").innerHTML = "";               
+                document.getElementById("success-message").innerHTML = "Your form has been submitted";               
             }
 
             return isValid; // Return true if all required fields are filled, false otherwise
@@ -130,7 +128,7 @@
           </script>
 
           <div class="col-12 col-sm-6 col-md-6 p-3 formc">
-            <form action="" method="get" id="myForm">
+            <form action="https://formspree.io/f/xjvnklnd" method="POST" id="myForm" onsubmit="return validateForm()">
               <div class="row mt-4">
                 <div class="form-group col-md-6 mb-3">
                   <input type="text" class="form-control" id="myTextInput" name="fname" oninput="restrictToAlphabetic(this)" placeholder="First Name*" data-required="true">
@@ -182,8 +180,9 @@
                 <div class="form-group col-md-12 mb-3 text-center">
                   <span id="error-message" class="error-message"></span>
                   <br>
-                  <button class="btn btn-primary submitbtn" name="btn-submit" type="button" onclick="return validateForm()"><i class="fa-solid fa-paper-plane"></i>  Send Message
+                  <button class="btn btn-primary submitbtn" name="btn-submit" type="submit" ><i class="fa-solid fa-paper-plane"></i>  Send Message
                   </button>
+                  <span id="success-message" class="success-message"></span>
                 </div>
               </div>
 
