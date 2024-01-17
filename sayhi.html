@@ -119,8 +119,7 @@
             }
             if (isValid) {
                 // If all required fields have values, clear any previous error message
-                document.getElementById("error-message").innerHTML = "";               
-                document.getElementById("success-message").innerHTML = "Your form has been submitted";               
+                document.getElementById("error-message").innerHTML = "";                             
             }
 
             return isValid; // Return true if all required fields are filled, false otherwise
@@ -182,7 +181,6 @@
                   <br>
                   <button class="btn btn-primary submitbtn" name="btn-submit" type="submit" ><i class="fa-solid fa-paper-plane"></i>  Send Message
                   </button>
-                  <span id="success-message" class="success-message"></span>
                 </div>
               </div>
 
