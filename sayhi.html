@@ -179,8 +179,13 @@
                 <div class="form-group col-md-12 mb-3 text-center">
                   <span id="error-message" class="error-message"></span>
                   <br>
-                  <button class="btn btn-primary submitbtn" name="btn-submit" type="submit" ><i class="fa-solid fa-paper-plane"></i>  Send Message
+                  <button class="btn btn-primary submitbtn" name="btn-submit" type="submit" onclick="resetForm()" ><i class="fa-solid fa-paper-plane"></i>  Send Message
                   </button>
+                  <script>
+                    function resetForm() {
+                        document.getElementById("myForm").reset();
+                    }
+                  </script>
                 </div>
               </div>
 
