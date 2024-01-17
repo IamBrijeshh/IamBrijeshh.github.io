@@ -100,13 +100,39 @@
             <p class="contactpara">I’d love to hear from you; whether you want to know more about my profile, want to collaborate on a project, or simply just want to say hello.</p>
             <p class="contactpara">You can fill out the form on the right to get in touch with me !!!</p>
           </div>
-          
-          
+
+          <script>
+            function validateForm() {
+            var requiredFields = document.querySelectorAll('[data-required]');
+            var isValid = true;
+
+            for (var i = 0; i < requiredFields.length; i++) {
+                var field = requiredFields[i];
+                var fieldValue = field.value.trim();
+
+                if (fieldValue === '') {
+                    // If the field is empty, show an error message
+                    document.getElementById("error-message").innerHTML = "Please fill in all required fields.";
+                    isValid = false;
+                    break;  // Exit the loop if any required field is empty
+                }
+            }
+
+            if (isValid) {
+                // If all required fields have values, clear any previous error message
+                document.getElementById("error-message").innerHTML = "";
+                alert("Form submitted ssuccessfully");
+            }
+
+            return isValid; // Return true if all required fields are filled, false otherwise
+        }
+          </script>
+
           <div class="col-12 col-sm-6 col-md-6 p-3 formc">
-            <form action="" method="" id="myForm">
+            <form action="" method="post" id="myForm" onsubmit="return validateForm()">
               <div class="row mt-4">
                 <div class="form-group col-md-6 mb-3">
-                  <input type="text" class="form-control" id="myTextInput" name="fname" oninput="restrictToAlphabetic(this)" placeholder="First Name*" required>
+                  <input type="text" class="form-control" id="myTextInput" name="fname" oninput="restrictToAlphabetic(this)" placeholder="First Name*" data-required="true">
                   <script>
                     function restrictToAlphabetic(element) {
                       element.value = element.value.replace(/[^a-zA-Z]/g, '');
@@ -114,30 +140,34 @@
                   </script>
                 </div>
                 <div class="form-group col-md-6 mb-3">
-                  <input type="text" class="form-control" id="myTextInput" name="lname" oninput="restrictToAlphabetic(this)" placeholder="Last Name*" required>
+                  <input type="text" class="form-control" id="myTextInput" name="lname" oninput="restrictToAlphabetic(this)" placeholder="Last Name*" data-required="true">
                 </div>
                </div>
 
               <div class="row"> 
                 <div class="form-group col-md-6 mb-3">
-                  <input type="phone" class="form-control" id="myNumberInput" name="monumber" oninput="limitNumberLength(this, 13)"  placeholder="Phone*" required>
+                  <input type="phone" class="form-control" id="myNumberInput" name="monumber" oninput="restrictToNumeric(this); limitNumberLength(this, 13)"  placeholder="Phone*" data-required="true">
                   <script>
                     function limitNumberLength(element, maxLength) {
                       if (element.value.length > maxLength) {
                           element.value = element.value.slice(0, maxLength);
                           }
                     }
+                    function restrictToNumeric(element){
+                      element.value = element.value.replace(/[^0-9]/g, '');
+                    }
+
                   </script>
                 </div>
 
                 <div class="form-group col-md-6 mb-3">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Email*" required>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Email*" data-required="true">
                 </div>
               </div>
 
               <div class="row">
                 <div class="form-group col-md-12 mb-3">
-                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject*" required>
+                  <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject*" data-required="true">
                 </div>
               </div>
 
@@ -146,10 +176,12 @@
                   <textarea class="form-control" id="message" name="message" rows="5" placeholder="Enter your message"></textarea>
                 </div>
               </div>
-
+              
               <div class="row">  
                 <div class="form-group col-md-12 mb-3 text-center">
-                  <button class="btn btn-primary submitbtn" name="btn-submit" type="button" onclick = "openPopup()"><i class="fa-solid fa-paper-plane"></i>  Send Message
+                  <span id="error-message" class="error-message"></span>
+                  <br>
+                  <button class="btn btn-primary submitbtn" name="btn-submit" type="submit"><i class="fa-solid fa-paper-plane"></i>  Send Message
                   </button>
                 </div>
               </div>
@@ -160,32 +192,6 @@
       </div>
     </section>
 
-    <section class="pop mb-3">
-      <div class="container">
-        <div class="row">
-            <div class="popup" id="popup">
-                      <img src="images/sayhii/tick.png" alt="tick">
-                      <h2>Thank you!</h2>
-                      <p>Your details has been submitted successfully!!!</p>
-                      <button type="button" onclick = "closePopup(); resetForm();">Okay!!</button>
-            </div>
-          <script>
-            let popup = document.getElementById("popup");
-            function openPopup(){
-              popup.classList.add("open-popup");
-            }
-        
-            function closePopup(){
-              popup.classList.remove("open-popup");
-            }
-
-            function resetForm(){
-              document.getElementById("myForm").reset();
-            }   
-          </script>
-        </div>
-      </div>
-    </section>
 
     <!-- End of formcontent section -->
 
