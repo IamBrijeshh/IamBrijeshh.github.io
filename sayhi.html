@@ -117,11 +117,12 @@
                     break;  // Exit the loop if any required field is empty
                 }
             }
-
             if (isValid) {
                 // If all required fields have values, clear any previous error message
                 document.getElementById("error-message").innerHTML = "";
-                alert("Form submitted ssuccessfully");
+
+                alert("Form submitted successfully!");
+                
             }
 
             return isValid; // Return true if all required fields are filled, false otherwise
@@ -181,7 +182,7 @@
                 <div class="form-group col-md-12 mb-3 text-center">
                   <span id="error-message" class="error-message"></span>
                   <br>
-                  <button class="btn btn-primary submitbtn" name="btn-submit" type="submit"><i class="fa-solid fa-paper-plane"></i>  Send Message
+                  <button class="btn btn-primary submitbtn" name="btn-submit" type="button"><i class="fa-solid fa-paper-plane"></i>  Send Message
                   </button>
                 </div>
               </div>
