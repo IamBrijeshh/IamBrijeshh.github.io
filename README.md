@@ -21,9 +21,9 @@ Contact form for visitors to reach out to me
 Technologies Used
 This website is built using the following technologies:
 
-HTML5
-CSS3 (including Flexbox and Grid)
-JavaScript (with jQuery)
-Bootstrap framework
+    HTML5
+    CSS3 (including Flexbox and Grid)
+    JavaScript (with jQuery)
+    Bootstrap framework
   </body>
 </html>
