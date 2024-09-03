@@ -7,6 +7,7 @@ trigger:
 - master
 
 pool:
+  name: 'DevOpsDemo'
   vmImage: ubuntu-latest
 
 steps:
